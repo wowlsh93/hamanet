@@ -21,17 +21,11 @@
 
 ### build (client)
 <pre><code>
- git clone https://github.com/wowlsh93/hamanet.git
- cd hamanet
+ In Same hamanet directory 
  
-  CMakeLists(client).txt <-- remove "(client)"
-  CMakeLists.txt <--- add "(server" 
+ CMakeLists(client).txt <-- remove "(client)"
+ CMakeLists.txt <--- add "(server" 
 
- mkdir build
- cd build
- cmake ..
- cmake --build .
- ./lyricsreader
 </pre></code>
 
 ### run 
