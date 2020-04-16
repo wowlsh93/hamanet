@@ -149,7 +149,7 @@ but on ePoll ,"OnRecv, OnSend" happens when i/o is ready. so I can not know how 
 
 ## Future work 
 
-- worker thread pool (for user side about cpu intesive job)
+- worker thread pool (at user side for cpu intesive job)
 - efficient buffer 
 - and a lot :-) 
 
