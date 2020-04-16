@@ -14,18 +14,22 @@ High performance async network library based on Linux ePoll for C++ programmers.
  mkdir build
  cd build
  cmake ..
- cmake --build .
- ./lyricspoet 
+ cmake --build . [or make] 
+ ./hamanet 
 </pre></code>
 
 
 ### build (client)
 <pre><code>
- In Same hamanet directory 
+ In hamanet root directory 
  
  CMakeLists(client).txt <-- remove "(client)"
  CMakeLists.txt <--- add "(server)" 
-
+ 
+ cd build
+ cmake ..
+ cmake --build . [or make] 
+ ./hamanet_client 
 </pre></code>
 
 ## run 
