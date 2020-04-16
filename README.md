@@ -105,28 +105,36 @@ int main() {
 ### Architecture
 
 - NetBase
+
   this supports TCP/IP options and common attributes.
 
 - NetServer
+
   this has server side operations like open / bind / listen 
 
 - NetClient
+
   this has client side operations like connect and write. write function() do not write to socket directly,  it store at core buffer.  when ePool's Write event happens , It starts to  write it to socket
 
 - NetSession
+
   this is composed of socket discriptor, read/write temporary buffer. this buffer is just std::string so it can be more efficient structure later
   
 - NetIO
+
   this is core epoll i/o operator. (based on Edge Trigger(ET))
   when some events happend, sessions will basic react on it and pass over to user application.
 
 - NetHandler
+
   This is a Interface having OnRecv, OnSend. User who use this network library can overide this function for his/him application.
 
 - LyricsPoet 
+
   servser side example
   
 - LyricsReader
+
   client side example 
 
 ### Future work 
