@@ -105,8 +105,8 @@ int main() {
 ### Architecture
 
 - ePoll is react pattern. So some part  is a little bit  tricky compared to IOCP(WINDOWS) of Proact Pattern.
-on IOCP,  "OnRecv, OnSend" happen when  i/o is completed. so I can know how much i send/recv data correctly. 
-but on ePoll ,"OnRecv, OnSend" happend when i/o is ready. so I can not know how much I can send/recv data correctly.  It 's  nontransparent on my knowlege. "need more experiment."
+on IOCP,  "OnRecv, OnSend" happens when  i/o is completed. so I can know how much i send/recv data correctly. 
+but on ePoll ,"OnRecv, OnSend" happens when i/o is ready. so I can not know how much I can send/recv data correctly.  It 's  nontransparent on my knowlege. "need more experiment."
 
 
 - NetBase
