@@ -193,22 +193,30 @@ namespace hama {
                     }
                     else if (m_events[i].events & EPOLLIN)
                     {
-                        int err = sess->onRecv();
+                        int ret = sess->onRecv();
 
-                        if (err <= 0) {
+                        if (ret < 0) {
                             sess->onClose();
                             terminateSession(sess);
                             continue;
                         }
 
-                        m_handler->OnRecv(sess);
+                        if (ret > 0)
+                            m_handler->OnRecv(sess);
                     }
                     else if (m_events[i].events & EPOLLOUT)
                     {
                         int ret = sess->onSend();
-                        if (ret != 0){
-                            m_handler->OnSend(sess);
+
+                        if (ret < 0) {
+                            sess->onClose();
+                            terminateSession(sess);
+                            continue;
                         }
+
+                        if (ret > 0)
+                            m_handler->OnSend(sess);
+
                     }
                     else if ((m_events[i].events & EPOLLHUP)
                              || (m_events[i].events & EPOLLRDHUP)  // half close by the remote connection

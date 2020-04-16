@@ -74,19 +74,20 @@ namespace hama {
 
             if (  m_send.m_data == "")
                 return 0;
+
             std::lock_guard<std::mutex> guard(m_sendmtx);
 
             if (m_sd == -1){
                 return -1;
             }
 
-            auto sendlength = ::send(m_sd, (void *) m_send.m_data.c_str(), m_send.m_data.length(), 0);
+            auto ret = ::send(m_sd, (void *) m_send.m_data.c_str(), m_send.m_data.length(), 0);
 
             // In case data is large, it can remain some part.
             // So next write event time, we will write it continueasly
-            m_send.reset(sendlength);
+            m_send.reset(ret);
 
-            return 1;
+            return ret;
         }
 
         // you should read current all buffer  because event happens only once
@@ -102,7 +103,7 @@ namespace hama {
             int length = recv(m_sd, buffer, sizeof(buffer), 0);
 
             if (length == 0)
-                return 0;
+                return -1;
 
             if (length == -1){
                 if (errno == EAGAIN || errno == EWOULDBLOCK){
