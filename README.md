@@ -1,13 +1,13 @@
 # hamanet
 High performance async network library based on Linux ePoll for C++ programmers.
 
-### enviroment 
+## enviroment 
 
 - ubuntu 18.04 (https://en.wikipedia.org/wiki/Epoll)
 - C++ compiler with C++17 support.
 - CMake(>=3.15)
 
-### build (server)
+## build (server)
 <pre><code>
  git clone https://github.com/wowlsh93/hamanet.git
  cd hamanet
@@ -28,7 +28,7 @@ High performance async network library based on Linux ePoll for C++ programmers.
 
 </pre></code>
 
-### run 
+## run 
 
 - server start
 
@@ -38,7 +38,7 @@ High performance async network library based on Linux ePoll for C++ programmers.
 
 ./lyricsreader
 
-### example (very easy!!)
+## example (very simple !!)
 
 server
 <pre><code>
@@ -102,7 +102,8 @@ int main() {
 </pre></code>
 
 
-### Architecture
+
+## Architecture
 
 ePoll is react pattern. So some part  is a little bit  tricky compared to IOCP(WINDOWS) of Proact Pattern.
 on IOCP,  "OnRecv, OnSend" happens when  i/o is completed. so I can know how much i send/recv data correctly. 
@@ -142,10 +143,10 @@ but on ePoll ,"OnRecv, OnSend" happens when i/o is ready. so I can not know how 
 
   client side very simple example 
 
-### Future work 
+## Future work 
 
 - a lot :-) 
 
-### Email
+## Email
 
 wowlsh93@gmail.com
