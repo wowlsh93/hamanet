@@ -1,5 +1,5 @@
 # hamanet
-This is an asynchronous network library based on Linux ePoll for C++ programmers.
+High performance async network library based on Linux ePoll for C++ programmers.
 
 ### enviroment 
 
