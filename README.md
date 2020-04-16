@@ -127,15 +127,15 @@ int main() {
 
 - NetHandler
 
-  This is a Interface having OnRecv, OnSend. User who use this network library can overide this function for his/him application.
+  This is a Interface having OnRecv, OnSend. User who use this network library can override/implement this function for his/him target application
 
 - LyricsPoet 
 
-  servser side example
+  servser side very simple example
   
 - LyricsReader
 
-  client side example 
+  client side very simple example 
 
 ### Future work 
 
