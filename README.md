@@ -104,6 +104,11 @@ int main() {
 
 ### Architecture
 
+- ePoll is react pattern. So some part  is a little bit  tricky compared to IOCP(WINDOWS) of Proact Pattern.
+on IOCP,  "OnRecv, OnSend" happen when  i/o is completed. so I can know how much i send/recv data correctly. 
+but on ePoll ,"OnRecv, OnSend" happend when i/o is ready. so I can not know how much I can send/recv data correctly.  It 's  nontransparent on my knowlege.
+
+
 - NetBase
 
   this supports TCP/IP options and common attributes.
@@ -123,11 +128,11 @@ int main() {
 - NetIO
 
   this is core epoll i/o operator. (based on Edge Trigger(ET))
-  when some events happen, sessions will basic react on it and pass over to user application.
+  when some events happen, sessions will react firstly on it and pass over to user application.
 
 - NetHandler
 
-  This is a Interface having OnRecv, OnSend. User who use this network library can override/implement this function for his/him target application
+  This is a Interface having OnRecv, OnSend. User who use this network library can override/implement this function for his/her target applications
 
 - LyricsPoet 
 
@@ -142,4 +147,5 @@ int main() {
 - a lot :-) 
 
 ### Email
+
 wowlsh93@gmail.com
