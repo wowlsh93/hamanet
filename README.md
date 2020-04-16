@@ -123,7 +123,7 @@ int main() {
 - NetIO
 
   this is core epoll i/o operator. (based on Edge Trigger(ET))
-  when some events happend, sessions will basic react on it and pass over to user application.
+  when some events happen, sessions will basic react on it and pass over to user application.
 
 - NetHandler
 
