@@ -32,11 +32,11 @@ High performance async network library based on Linux ePoll for C++ programmers.
 
 - server start
 
-./lyricspoet
+   ./hamanet
 
 - client start
 
-./lyricsreader
+   ./hamanet_client
 
 ## example (very simple !!)
 
