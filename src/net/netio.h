@@ -10,7 +10,7 @@
 #include <iostream>
 #include <unistd.h>
 #include <list>
-#include <algorithm>>
+#include <algorithm>
 // hama library
 #include "../util/util.h"
 #include "netsession.h"
