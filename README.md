@@ -132,7 +132,7 @@ but on ePoll ,"OnRecv, OnSend" happens when i/o is ready. so I can not know how 
 
 - NetPacket
 
-  This is a buffer for read data from raw soxket. when recv event happens.
+  This is a buffer for read data from raw socket when recv event happens
   and send data for sending when send event happens
 
 - NetIO
