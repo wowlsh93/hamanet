@@ -129,7 +129,12 @@ but on ePoll ,"OnRecv, OnSend" happens when i/o is ready. so I can not know how 
 - NetSession
 
   this is composed of socket discriptor, read/write temporary buffer. this buffer is just std::string so it can be more efficient structure later
-  
+
+- NetPacket
+
+  This is a buffer for read data from raw soxket. when recv event happens.
+  and send data for sending when send event happens
+
 - NetIO
 
   this is core epoll i/o operator. (based on Edge Trigger(ET))
