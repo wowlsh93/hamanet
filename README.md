@@ -155,8 +155,14 @@ but on ePoll ,"OnRecv, OnSend" happens when i/o is ready. so I can not know how 
 
 ## Future work 
 
-- worker thread pool (at user side for cpu intensive job)
-- efficient buffer 
+- Event loop thread pool 
+- worker thread pool (at user side example for cpu intensive job)
+- efficient user firendly buffer 
+- UDP / HTTPS 
+- Windows (IOCP) supports 
+- More practical examples 
+- Configuration settings 
+- Exception handling, Logging, Tests, Documentation, Benchmark...
 - and a lot :-) 
 
 ## Email
