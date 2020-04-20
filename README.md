@@ -50,7 +50,7 @@ server
 // Created by hama on 20. 4. 16..
 //
 
-#include << iostream >>
+#include < iostream >
 
 
 #include "src/net/netserver.h"
@@ -91,7 +91,7 @@ int main() {
     std::cout << "========================" << std::endl;
 
 
-    auto myhandler = std::make_shared<LyricsPoet>();
+    auto myhandler = std::make_shared< LyricsPoet > ();
 
     hama::NetServer server;
     server.setHandler(myhandler);
