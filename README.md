@@ -139,7 +139,7 @@ but on ePoll ,"OnRecv, OnSend" happens when i/o is ready. so I can not know how 
 - NetIO
 
   this is core epoll i/o operator. (based on Edge Trigger(ET))
-  when some events happen, sessions will react firstly on it and pass over to user application.
+  when some events happen, sessions will react firstly on it and pass over to user application with buffer
 
 - NetHandler
 
