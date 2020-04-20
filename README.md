@@ -90,7 +90,8 @@ int main() {
     std::cout << "----- start server ----" << std::endl;
     std::cout << "========================" << std::endl;
 
-    auto myhandler = std::make_shared<LyricsPoet>();
+
+   auto myhandler = std::make_shared<LyricsPoet>();
 
     hama::NetServer server;
     server.setHandler(myhandler);
