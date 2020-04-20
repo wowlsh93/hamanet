@@ -50,7 +50,7 @@ server
 // Created by hama on 20. 4. 16..
 //
 
-#include <<iostream>>
+#include << iostream >>
 
 
 #include "src/net/netserver.h"
