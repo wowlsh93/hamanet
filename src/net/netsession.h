@@ -19,10 +19,10 @@ namespace hama {
 
     #define MAX_RECV_BYTES 1024 * 64
     class NetIO;
-    class NetPacket
+    class NetBuffer
     {
     public:
-        NetPacket() {
+        NetBuffer() {
             m_data.reserve(MAX_RECV_BYTES);
         }
         void reset(int sendsize)
@@ -49,8 +49,8 @@ namespace hama {
         int m_sd = -1;
 
         NetIO *     m_io;
-        NetPacket   m_send;
-        NetPacket   m_recv;
+        NetBuffer   m_send;
+        NetBuffer   m_recv;
 
         std::mutex  m_sendmtx;
 
