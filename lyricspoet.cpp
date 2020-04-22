@@ -13,13 +13,13 @@
 class LyricsPoet : public hama::NetHandler {
 public:
 
-    virtual void OnRecv(hama::NetSession * sess) {
+    virtual void OnRecv(hama::NetSession * sess, hama::NetBuffer * buff) {
 
         std::cout << "LyricsPoet:  recv ok" << std::endl;
-        std::cout << sess->m_recv.m_data << std::endl;
+        std::cout << buff->m_data << std::endl;
         // send base on recv data
 
-        int ntimes = atoi(sess->m_recv.m_data.c_str());
+        int ntimes = atoi(buff->m_data.c_str());
 
         const char* contents = R"""(
         If you can keep your head when all about you
@@ -65,7 +65,7 @@ public:
         }
     }
 
-    virtual void OnSend(hama::NetSession * sess){
+    virtual void OnSend(hama::NetSession * sess, hama::NetBuffer * buff){
 
         std::cout << "LyricsPoet: send ok" << std::endl;
 

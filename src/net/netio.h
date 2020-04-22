@@ -202,7 +202,7 @@ namespace hama {
                         }
 
                         if (ret > 0)
-                            m_handler->OnRecv(sess);
+                            m_handler->OnRecv(sess, &sess->m_recv);
                     }
                     else if (m_events[i].events & EPOLLOUT)
                     {
@@ -215,7 +215,7 @@ namespace hama {
                         }
 
                         if (ret > 0)
-                            m_handler->OnSend(sess);
+                            m_handler->OnSend(sess, &sess->m_send);
 
                     }
                     else if ((m_events[i].events & EPOLLHUP)

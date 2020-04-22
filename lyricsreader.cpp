@@ -10,13 +10,13 @@
 class LyricsClient : public hama::NetHandler {
 public:
 
-    virtual void OnRecv(hama::NetSession * sess) {
+    virtual void OnRecv(hama::NetSession * sess, hama::NetBuffer * buff) {
         std::cout << "LyricsClient recv" << std::endl;
-        std::cout << sess->m_recv.m_data << std::endl;
+        std::cout << buff->m_data << std::endl;
 
     }
 
-    virtual void OnSend(hama::NetSession * sess){
+    virtual void OnSend(hama::NetSession * sess, hama::NetBuffer * buff){
         std::cout << "LyricsClient requesting!!" << std::endl;
     }
 

@@ -10,10 +10,11 @@
 namespace hama {
 
     class NetSession;
+    class NetBuffer;
     class NetHandler {
     public:
-        virtual void OnRecv(NetSession *sess) = 0;
-        virtual void OnSend(NetSession *sess) = 0;
+        virtual void OnRecv(NetSession *sess, NetBuffer * buf) = 0;
+        virtual void OnSend(NetSession *sess, NetBuffer * buf) = 0;
     };
 
 }
