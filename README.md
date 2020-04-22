@@ -50,7 +50,7 @@ server
 // Created by hama on 20. 4. 16..
 //
 
-#include <iostream>
+#include < iostream >
 
 
 #include "src/net/netserver.h"
@@ -90,7 +90,8 @@ int main() {
     std::cout << "----- start server ----" << std::endl;
     std::cout << "========================" << std::endl;
 
-    auto myhandler = std::make_shared<LyricsPoet>();
+
+    auto myhandler = std::make_shared< LyricsPoet > ();
 
     hama::NetServer server;
     server.setHandler(myhandler);
@@ -138,7 +139,7 @@ but on ePoll ,"OnRecv, OnSend" happens when i/o is ready. so I can not know how 
 - NetIO
 
   this is core epoll i/o operator. (based on Edge Trigger(ET))
-  when some events happen, sessions will react firstly on it and pass over to user application.
+  when some events happen, sessions will react firstly on it and pass over to user application with buffer
 
 - NetHandler
 
@@ -154,10 +155,18 @@ but on ePoll ,"OnRecv, OnSend" happens when i/o is ready. so I can not know how 
 
 ## Future work 
 
-- worker thread pool (at user side for cpu intensive job)
-- efficient buffer 
+- Event loop thread pool 
+- worker thread pool (at user side example for cpu intensive job)
+- efficient user firendly buffer 
+- UDP / HTTPS supports
+- Windows (IOCP) supports 
+- More practical examples 
+- Configuration settings 
+- Exception handling, Logging, Tests, Documentation, Benchmark...
 - and a lot :-) 
 
-## Email
+## Contact me  
 
-wowlsh93@gmail.com
+Email : wowlsh93@gmail.com
+
+Blog  : hamait.tistory.com
