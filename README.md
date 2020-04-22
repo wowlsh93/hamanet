@@ -131,7 +131,7 @@ but on ePoll ,"OnRecv, OnSend" happens when i/o is ready. so I can not know how 
 
   this is composed of socket discriptor, read/write temporary buffer. this buffer is just std::string so it can be more efficient structure later
 
-- NetPacket
+- NetBuffer
 
   This is a buffer for read data from raw socket when recv event happens
   and send data for sending when send event happens
